@@ -3,6 +3,8 @@ Test for Snyk
 
 There is a regression introduced in Snyk version 1.1163.0 with regards to [yarn resolutions](https://classic.yarnpkg.com/lang/en/docs/selective-version-resolutions/) - Snyk no longer properly handles projects that use this yarn feature.
 
+[This regression was reported to snyk as request 51461](http://support.snyk.io/hc/requests/51461).
+
 To demonstrate this regression, clone https://github.com/candrews/snyk-workspace-test then run `npx snyk@1.1162.0 test --yarn-workspaces -d` (to see how it used to work correctly) or `npx snyk@1.1163.0 test --yarn-workspaces -d` (to see the new unexpected failure). I suspect this regression was introduced by https://github.com/snyk/cli/commit/97a60a6ca7e0e841f53bd265370cfcfdf3eb56c6.
 
 When using Snyk 1.1162.0, vulnerabilities are reported as expected without error:
