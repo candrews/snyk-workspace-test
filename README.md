@@ -1,6 +1,8 @@
 Test for Snyk
 =============
 
+__UPDATE__ This regression was fixed in [Snyk CLI v1.1176.0](https://github.com/snyk/cli/releases/tag/v1.1176.0)
+
 There is a regression introduced in Snyk version 1.1163.0 with regards to [yarn resolutions](https://classic.yarnpkg.com/lang/en/docs/selective-version-resolutions/) - Snyk no longer properly handles projects that use this yarn feature.
 
 [This regression was reported to snyk as request 51461](http://support.snyk.io/hc/requests/51461).
